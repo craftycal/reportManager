@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return '<h1>About</h1>';
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
