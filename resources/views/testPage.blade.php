@@ -83,19 +83,20 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/') }}">Home</a>
+                    <a href="{{ url('/') }}">Default</a>
                     <!-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a> -->
                 </div>
+                <br>
                 <div style="width: 70%; margin: 0 auto">
 
                     <?php date_default_timezone_set("Pacific/Auckland") ?>
 
                     @foreach ($posts as $key => $post) 
 
-                    <p>{{ $post->excerpt }}</p>
+                    <img src="{{ asset('storage')}}/{{ $post->image }}" width="30%" />
                     <p>{{ date("h:i:sa") }}</p>
 
                     @endforeach
