@@ -13,9 +13,12 @@ $greyDark : #E1E2E1;
 $greyLight : #fdfdfd;
 $text : #333334;
 
-body {
-  font-family: 'Muli', sans-serif;
-}
+body { font-family: 'Muli', sans-serif; color: $text; }
+h1 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h2 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h3 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
+h4 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
+h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
 
 .button, button {
   border: none;
@@ -48,10 +51,8 @@ body {
     &:focus  {
        outline: none;
     }
-
   }
 }
-
 
 .loginMenu {
   display: none;

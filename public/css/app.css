@@ -8352,6 +8352,37 @@ button.close {
 
 body {
   font-family: 'Muli', sans-serif;
+  color: #333334;
+}
+
+h1 {
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.31em;
+}
+
+h4 {
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.125em;
+}
+
+h5 {
+  font-family: 'Muli', sans-serif;
+  color: #333334;
+  font-size: 1.125em;
 }
 
 .button,
