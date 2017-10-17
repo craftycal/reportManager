@@ -32,6 +32,7 @@
                         {{ config('app.name', 'Laravel') }}
                     </a>
                     <a class="navbar-brand" href="{{ url('/testPage') }}">Test Page</a>
+                    <a class="navbar-brand" href="{{ url('posts/create') }}">Test Entries</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

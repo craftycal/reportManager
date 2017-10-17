@@ -84,6 +84,7 @@
 
                 <div class="links">
                     <a href="{{ url('/') }}">Default</a>
+                    <a href="{{ url('posts/create') }}">Test Entries</a>
                     <!-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
@@ -96,7 +97,7 @@
 
                     @foreach ($posts as $key => $post) 
 
-                    <img src="{{ asset('storage')}}/{{ $post->image }}" width="30%" />
+                    <img src="{{ asset('storage/'. $post->image) }}" width="25%" />
                     <p>{{ date("h:i:sa") }}</p>
 
                     @endforeach

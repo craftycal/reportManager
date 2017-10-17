@@ -25,6 +25,14 @@ Route::get('testPage', function () {
 
 });
 
+Route::get('posts/create', function () {
+    return view('posts/create');
+});
+
+// Route::post('addPost', function () {
+//     return view('testEntries');
+// });
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
