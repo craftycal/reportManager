@@ -11,9 +11,25 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
+
+Route::get('/newReport', function () {
+    return view('newReport');
+});
+
+Route::get('/viewReport', function () {
+    return view('viewReport');
+});
+
+
+
+
 
 
 Route::group(['prefix' => 'admin'], function () {

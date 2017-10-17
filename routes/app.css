@@ -8359,7 +8359,7 @@ button {
   border: none;
   background-color: #7b1fa2;
   color: #fdfdfd;
-  padding: 7px 10px;
+  padding: 4px 10px;
 }
 
 .button:hover,
@@ -8396,20 +8396,24 @@ button:focus {
   outline: none;
 }
 
-.loginMenu {
-  display: none;
+.login {
+  width: 100%;
   background-color: #E1E2E1;
   position: absolute;
   top: 30px;
-  right: 0;
+  display: block;
 }
 
-.loginMenu .loginData {
-  padding: 10px;
-}
-
-.loginMenu .input-group input {
+.login .loginData {
   margin: 10px;
+  float: right;
+}
+
+.login .input-group {
   width: 200px;
+}
+
+.login .input-group input {
+  float: right;
 }
 

@@ -1,0 +1,73 @@
+// purple primary
+$purpleDark : #4a0072;
+$purpleLight : #ae52d4;
+$purpleBase : #7b1fa2;
+
+// yellow secondary
+$yellowDark : #c79100;
+$yellowLight : #fff350;
+$yellowBase : #ffc107;
+
+// grey 
+$greyDark : #E1E2E1;
+$greyLight : #fdfdfd;
+$text : #333334;
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+.button, button {
+  border: none;
+  background-color: $purpleBase;
+  color: $greyLight;
+  padding: 7px 10px;
+  &:hover {
+    background-color: $purpleLight;
+  }
+  &:focus  {
+     outline: none;
+  }
+}
+
+.topBar {
+  background-color: $purpleDark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  button {
+    float: right;
+    border: none;
+    background-color: $purpleBase;
+    color: $greyLight;
+    padding: 4px 10px;
+    &:hover {
+      background-color: $purpleLight;
+    }
+    &:focus  {
+       outline: none;
+    }
+
+  }
+}
+
+
+.loginMenu {
+  display: none;
+  background-color: $greyDark;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  .loginData {
+    padding: 10px;
+  }
+  .input-group {
+    input {
+      margin: 10px;
+      width: 200px;
+    }
+  }
+}
+
+
