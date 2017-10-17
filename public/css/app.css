@@ -8353,6 +8353,12 @@ button.close {
 body {
   font-family: 'Muli', sans-serif;
   color: #333334;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -8391,11 +8397,16 @@ button {
   background-color: #7b1fa2;
   color: #fdfdfd;
   padding: 7px 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .button:hover,
 button:hover {
-  background-color: #ae52d4;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .button:focus,
@@ -8405,10 +8416,11 @@ button:focus {
 
 .topBar {
   background-color: #4a0072;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
+  height: 30px;
 }
 
 .topBar button {
@@ -8442,5 +8454,43 @@ button:focus {
 .loginMenu .input-group input {
   margin: 10px;
   width: 200px;
+}
+
+.sideMenu {
+  display: none;
+  position: relative;
+  background-color: #7b1fa2;
+  height: 100%;
+  width: 200px;
+}
+
+.sideNavButton {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sideNavButton:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sideNavButton p {
+  vertical-align: middle;
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 2.5em;
+  margin: 0;
+  width: 60px;
+  height: 60px;
 }
 

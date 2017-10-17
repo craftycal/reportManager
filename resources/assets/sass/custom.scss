@@ -13,7 +13,17 @@ $greyDark : #E1E2E1;
 $greyLight : #fdfdfd;
 $text : #333334;
 
-body { font-family: 'Muli', sans-serif; color: $text; }
+body { 
+  font-family: 'Muli', sans-serif; 
+  color: $text; 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
 h1 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
 h2 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
 h3 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
@@ -25,20 +35,24 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
   background-color: $purpleBase;
   color: $greyLight;
   padding: 7px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover {
-    background-color: $purpleLight;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    // background-color: $purpleLight;
   }
   &:focus  {
-     outline: none;
+    outline: none;
   }
 }
 
 .topBar {
   background-color: $purpleDark;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
+  height: 30px;
   button {
     float: right;
     border: none;
@@ -49,7 +63,7 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
       background-color: $purpleLight;
     }
     &:focus  {
-       outline: none;
+      outline: none;
     }
   }
 }
@@ -71,4 +85,43 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
   }
 }
 
+.sideMenu {
+  display: none;
+  position: relative;
+  background-color: $purpleBase;
+  height: 100%;
+  width: 200px;
+  // .logo {
+  //   padding: 20%;
+  //   margin: 0 auto;
+  //   width: 160px;
+  //   display: block;
+  //   box-sizing: border-box;
+  // }
+}
+
+.sideNavButton {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  background-color: $yellowBase;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  p {
+    vertical-align: middle;
+    text-align: center;
+    color:  $greyLight;
+    font-size: 2.5em;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
 
