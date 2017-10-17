@@ -22,13 +22,33 @@ body {
   left: 0;
   right: 0;
   overflow: hidden;
+  .content {
+    overflow-y: scroll !important;
+    height: 100%;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+  .contentPannle {
+    margin-top: 20px;
+    padding: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: $greyLight;
+    &:hover{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .date {
+      text-align: right;
+    }
+  }
+  
 }
 
-h1 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
-h2 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
-h3 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
-h4 { font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
-h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
+h1 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h2 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h3 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
+h4 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
+h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
 
 .button, button {
   border: none;
@@ -39,7 +59,6 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   &:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    // background-color: $purpleLight;
   }
   &:focus  {
     outline: none;
@@ -71,9 +90,14 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
 .loginMenu {
   display: none;
   background-color: $greyDark;
+  z-index: 5;
   position: absolute;
   top: 30px;
   right: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  &:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
   .loginData {
     padding: 10px;
   }
@@ -86,21 +110,69 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
 }
 
 .sideMenu {
-  display: none;
+  // display: none;
   position: relative;
   background-color: $purpleBase;
   height: 100%;
   width: 200px;
-  // .logo {
-  //   padding: 20%;
-  //   margin: 0 auto;
-  //   width: 160px;
-  //   display: block;
-  //   box-sizing: border-box;
-  // }
+  display: inline-block;
+  padding-top: 60px;
+  .userIcon {
+    img {
+      height: 100px;
+      width: 100px;
+      border: 2px solid $purpleLight !important;
+      border-radius: 25px;
+      display: block;
+      margin: 0 auto;     
+      margin-bottom: 4px;  
+    }
+    .username {
+      font-size: 0.8em;
+      text-align: center;
+      color: $purpleLight;
+      margin-bottom: 34px;
+    }
+    &:hover {
+      p {
+          color: $greyLight;
+      }
+      img{
+        border: 2px solid $greyLight !important;
+      }
+    }
+  }
+  a {
+    font-size: 1.31em;
+    color: $purpleLight !important;
+    display: block;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 10px;
+    &:hover {
+      color: $greyLight !important;
+      text-decoration: none;
+    }
+    &:visited { text-decoration: none; color: $greyDark;}
+    &:focus { text-decoration: none;  color: $yellowBase;}
+    &:active { text-decoration: none; color: $yellowBase;}
+  } 
 }
 
+.noPadding {
+  padding: 0px;
+}
+
+.widthOff {   width: 40px !important;
+  .internal {
+    display: none;
+  }
+  
+}
+.positionOff { left: 10px !important;}
+
 .sideNavButton {
+  z-index: 6;
   position: absolute;
   top: 50%;
   left: 170px;
@@ -124,4 +196,5 @@ h5 { font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
     height: 60px;
   }
 }
+
 

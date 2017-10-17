@@ -10,13 +10,13 @@
   <script type="text/javascript" src="js/app.js"></script>
   
 </head>
-<body>
+<body >
   
   @include('inc.topBar')
   @include('inc.sideBar')
-  
-  
   @yield('content')
+  
+  
   
 </body>
 </html>

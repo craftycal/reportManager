@@ -8361,31 +8361,62 @@ body {
   overflow: hidden;
 }
 
+body .content {
+  overflow-y: scroll !important;
+  height: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+body .contentPannle {
+  margin-top: 20px;
+  padding: 22px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fdfdfd;
+}
+
+body .contentPannle:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .contentPannle .date {
+  text-align: right;
+}
+
 h1 {
+  text-transform: capitalize;
   font-family: 'Kreon', sans-serif;
   color: #ae52d4;
   font-size: 1.5em;
 }
 
 h2 {
+  text-transform: capitalize;
   font-family: 'Kreon', sans-serif;
   color: #ae52d4;
   font-size: 1.5em;
 }
 
 h3 {
+  text-transform: capitalize;
   font-family: 'Kreon', sans-serif;
   color: #ae52d4;
   font-size: 1.31em;
 }
 
 h4 {
+  text-transform: capitalize;
   font-family: 'Kreon', sans-serif;
   color: #ae52d4;
   font-size: 1.125em;
 }
 
 h5 {
+  text-transform: capitalize;
   font-family: 'Muli', sans-serif;
   color: #333334;
   font-size: 1.125em;
@@ -8442,9 +8473,17 @@ button:focus {
 .loginMenu {
   display: none;
   background-color: #E1E2E1;
+  z-index: 5;
   position: absolute;
   top: 30px;
   right: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.loginMenu:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .loginMenu .loginData {
@@ -8457,14 +8496,86 @@ button:focus {
 }
 
 .sideMenu {
-  display: none;
   position: relative;
   background-color: #7b1fa2;
   height: 100%;
   width: 200px;
+  display: inline-block;
+  padding-top: 60px;
+}
+
+.sideMenu .userIcon img {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #ae52d4 !important;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.sideMenu .userIcon .username {
+  font-size: 0.8em;
+  text-align: center;
+  color: #ae52d4;
+  margin-bottom: 34px;
+}
+
+.sideMenu .userIcon:hover p {
+  color: #fdfdfd;
+}
+
+.sideMenu .userIcon:hover img {
+  border: 2px solid #fdfdfd !important;
+}
+
+.sideMenu a {
+  font-size: 1.31em;
+  color: #ae52d4 !important;
+  display: block;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 10px;
+}
+
+.sideMenu a:hover {
+  color: #fdfdfd !important;
+  text-decoration: none;
+}
+
+.sideMenu a:visited {
+  text-decoration: none;
+  color: #E1E2E1;
+}
+
+.sideMenu a:focus {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+.sideMenu a:active {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.widthOff {
+  width: 40px !important;
+}
+
+.widthOff .internal {
+  display: none;
+}
+
+.positionOff {
+  left: 10px !important;
 }
 
 .sideNavButton {
+  z-index: 6;
   position: absolute;
   top: 50%;
   left: 170px;

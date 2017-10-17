@@ -31694,17 +31694,18 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-    $("#click").click(function () {
-        $("#pop").toggle();
-    });
+  $("#click").click(function () {
+    $("#pop").toggle();
+  });
 
-    $(".sideNavButton").click(function () {
-        $(".sideMenu").toggle();
-    });
+  // $( ".sideNavButton" ).click(function() {
+  //   $( ".sideMenu" ).toggle();
+  // });
 
-    // $( ".sideNavButton" ).click(function() {
-    //   $( ".sideMenu" ).css( );
-    // });
+  $(".sideNavButton").click(function () {
+    $('.sideMenu').toggleClass('widthOff');
+    $('.sideNavButton').toggleClass('positionOff');
+  });
 });
 
 /***/ }),
