@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends Controller
 {
@@ -13,7 +14,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+    
+        $post = Post::find($id);
+
+      
+        return view('posts.create', compact('post'));
     }
 
     /**
@@ -23,8 +28,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        $post = new Post;
-        return view('posts.create', ['post' => $post ]);
+        // $post = new Post;
+        return view('posts.create');
     }
 
     /**
@@ -35,7 +40,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $post = $this->validate(request(), [
+            'title' => 'required|max:255',
+            'image' => 'required|image',
+            'author_id' => 'required|integer',
+            'body' => 'required',
+            'slug' => ''
+        ]);
+
+        Post::create($post);
+
+        return back()->with('success', 'Post has been added');
     }
 
     /**

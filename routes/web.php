@@ -26,20 +26,23 @@ Route::get('testPage', function () {
 });
 
 Route::get('posts/create', function () {
-    return view('posts/create');
+    return view('posts/create', compact('post'));
 });
 
-// Route::post('addPost', function () {
-//     return view('testEntries');
-// });
+Route::get('posts/create', 'PostsController@create');
+
+Route::post('post', 'PostsController@store');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('resizeImage', 'ImageController@resizeImage');
 Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@resizeImagePost']);
+
+Auth::routes();
+
+Route::resource('post','PostsController');
