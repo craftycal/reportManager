@@ -8659,3 +8659,41 @@ button:focus {
   height: 100px;
 }
 
+.newReport #addcap {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.newReport .toolsList {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList .delete {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.newReport .toolsList input {
+  width: 100%;
+}
+
+.newReport .toolsList ul {
+  padding: 0px;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList ul li {
+  display: inline;
+}
+
+.newReport .toolsList ul li button {
+  width: 75px;
+}
+
