@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('landing');
 });
@@ -27,8 +23,13 @@ Route::get('/viewReport', function () {
     return view('viewReport');
 });
 
+Route::get('/404', function () {
+    return view('404');
+});
 
-
+Route::get('/home', function () {
+    return view('home');
+});
 
 
 

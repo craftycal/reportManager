@@ -8350,43 +8350,6 @@ button.close {
   }
 }
 
-body {
-  font-family: 'Muli', sans-serif;
-  color: #333334;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-}
-
-body .content {
-  overflow-y: scroll !important;
-  height: 100%;
-  margin-bottom: 100px;
-  padding-bottom: 100px;
-}
-
-body .contentPannle {
-  margin-top: 20px;
-  padding: 22px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-color: #fdfdfd;
-}
-
-body .contentPannle:hover {
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-body .contentPannle .date {
-  text-align: right;
-}
-
 h1 {
   text-transform: capitalize;
   font-family: 'Kreon', sans-serif;
@@ -8420,6 +8383,51 @@ h5 {
   font-family: 'Muli', sans-serif;
   color: #333334;
   font-size: 1.125em;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.append {
+  display: none;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #333334;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+body .content {
+  overflow-y: scroll !important;
+  height: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+body .contentPanel {
+  margin-top: 20px;
+  padding: 22px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fdfdfd;
+}
+
+body .contentPanel:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .contentPanel .date {
+  text-align: right;
 }
 
 .button,
@@ -8468,31 +8476,6 @@ button:focus {
 
 .topBar button:focus {
   outline: none;
-}
-
-.loginMenu {
-  display: none;
-  background-color: #E1E2E1;
-  z-index: 5;
-  position: absolute;
-  top: 30px;
-  right: 0;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.loginMenu:hover {
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.loginMenu .loginData {
-  padding: 10px;
-}
-
-.loginMenu .input-group input {
-  margin: 10px;
-  width: 200px;
 }
 
 .sideMenu {
@@ -8558,22 +8541,6 @@ button:focus {
   color: #ffc107;
 }
 
-.noPadding {
-  padding: 0px;
-}
-
-.widthOff {
-  width: 40px !important;
-}
-
-.widthOff .internal {
-  display: none;
-}
-
-.positionOff {
-  left: 10px !important;
-}
-
 .sideNavButton {
   z-index: 6;
   position: absolute;
@@ -8603,5 +8570,92 @@ button:focus {
   margin: 0;
   width: 60px;
   height: 60px;
+}
+
+.widthOff {
+  width: 40px !important;
+}
+
+.widthOff .internal {
+  display: none;
+}
+
+.positionOff {
+  left: 10px !important;
+}
+
+.landingBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.landingBackground .loginMenu {
+  background-color: #fdfdfd;
+  z-index: 5;
+  margin: 100px auto;
+  width: 260px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.landingBackground .loginMenu:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.landingBackground .loginMenu .logo {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.landingBackground .loginMenu h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.landingBackground .loginMenu .loginData {
+  padding: 10px;
+}
+
+.landingBackground .loginMenu .input-group input {
+  margin: 10px;
+  width: 240px;
+}
+
+.fourfour {
+  width: 100%;
+  margin: 100px auto;
+  display: block;
+  padding: 5% 10%;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fourfour .maze {
+  width: 200px;
+  height: 200px;
+}
+
+.fourfour h2 {
+  text-align: center;
+  font-size: 5em;
+}
+
+.fourfour p {
+  text-align: center;
+}
+
+.fourfour img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
 }
 

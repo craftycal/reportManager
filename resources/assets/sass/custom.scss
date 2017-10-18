@@ -13,9 +13,19 @@ $greyDark : #E1E2E1;
 $greyLight : #fdfdfd;
 $text : #333334;
 
-body { 
-  font-family: 'Muli', sans-serif; 
-  color: $text; 
+h1 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h2 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h3 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
+h4 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
+h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
+
+.noPadding { padding: 0px; }
+
+.append { display: none;}   
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: $text;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -28,7 +38,7 @@ body {
     margin-bottom: 100px;
     padding-bottom: 100px;
   }
-  .contentPannle {
+  .contentPanel {
     margin-top: 20px;
     padding: 22px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -41,14 +51,7 @@ body {
       text-align: right;
     }
   }
-  
 }
-
-h1 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
-h2 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
-h3 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
-h4 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
-h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
 
 .button, button {
   border: none;
@@ -60,11 +63,12 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
   &:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  &:focus  {
+  &:focus {
     outline: none;
   }
 }
 
+// top bar styles
 .topBar {
   background-color: $purpleDark;
   position: relative;
@@ -86,31 +90,10 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
     }
   }
 }
+// ^ top bar styles end ^
 
-.loginMenu {
-  display: none;
-  background-color: $greyDark;
-  z-index: 5;
-  position: absolute;
-  top: 30px;
-  right: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  &:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  .loginData {
-    padding: 10px;
-  }
-  .input-group {
-    input {
-      margin: 10px;
-      width: 200px;
-    }
-  }
-}
-
+// side menu styles
 .sideMenu {
-  // display: none;
   position: relative;
   background-color: $purpleBase;
   height: 100%;
@@ -124,8 +107,8 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
       border: 2px solid $purpleLight !important;
       border-radius: 25px;
       display: block;
-      margin: 0 auto;     
-      margin-bottom: 4px;  
+      margin: 0 auto;
+      margin-bottom: 4px;
     }
     .username {
       font-size: 0.8em;
@@ -135,9 +118,9 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
     }
     &:hover {
       p {
-          color: $greyLight;
+        color: $greyLight;
       }
-      img{
+      img {
         border: 2px solid $greyLight !important;
       }
     }
@@ -158,19 +141,6 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
     &:active { text-decoration: none; color: $yellowBase;}
   } 
 }
-
-.noPadding {
-  padding: 0px;
-}
-
-.widthOff {   width: 40px !important;
-  .internal {
-    display: none;
-  }
-  
-}
-.positionOff { left: 10px !important;}
-
 .sideNavButton {
   z-index: 6;
   position: absolute;
@@ -182,7 +152,7 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
   height: 60px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover{
+  &:hover {
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
@@ -196,5 +166,80 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
     height: 60px;
   }
 }
+.widthOff {
+  width: 40px !important;
+  .internal {
+    display: none; 
+  }
+}
+.positionOff { 
+  left: 10px !important;
+}
+// ^ side menu styles end ^
+
+// landing page 
+.landingBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .loginMenu {
+    background-color: $greyLight;
+    z-index: 5;
+    margin: 100px auto;
+    width: 260px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .logo {
+      width: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+    .loginData {
+      padding: 10px;
+    }
+    .input-group {
+      input {
+        margin: 10px;
+        width: 240px;
+      }
+    }
+  }
+}
+// ^ landing page styles end ^
 
 
+// 404
+.fourfour {
+width: 100%;
+margin: 100px auto;
+display: block;
+padding: 5% 10%;
+  background-color: $greyLight;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  .maze {
+    width: 200px;
+    height: 200px;
+  }
+  h2  {
+    text-align: center;
+    font-size: 5em;
+  }
+  p {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
+}

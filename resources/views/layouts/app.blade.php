@@ -11,9 +11,7 @@
   
 </head>
 <body >
-  
-  @include('inc.topBar')
-  @include('inc.sideBar')
+
   @yield('content')
   
   
