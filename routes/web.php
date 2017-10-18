@@ -46,3 +46,7 @@ Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@
 Auth::routes();
 
 Route::resource('post','PostsController');
+
+Route::any('form-submit', function(){
+ 	return Input::file('file')->getClientOriginalName();
+});

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Http\Requests\PostRequest;
+use Intervention\Image\ImageManager;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class PostsController extends Controller
 {
@@ -38,16 +42,17 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
 
-        $post = $this->validate(request(), [
-            'title' => 'required|max:255',
-            'image' => 'required|image',
-            'author_id' => 'required|integer',
-            'body' => 'required',
-            'slug' => ''
-        ]);
+        $post = $request->all();
+
+        if($request->hasFile('file')){
+
+            $img = $request->file('image');
+            $img = Image::make($img)->save();
+            Storage::putFile('posts', new File('/public/storage'));
+        }
 
         Post::create($post);
 

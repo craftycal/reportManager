@@ -53,7 +53,7 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-8">
-                          <label for="slug">slug:</label>
+                          <label for="slug">Slug:</label>
                           <input type="text" class="form-control" name="slug">
                         </div>
                     </div>
