@@ -8350,3 +8350,351 @@ button.close {
   }
 }
 
+h1 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.31em;
+}
+
+h4 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.125em;
+}
+
+h5 {
+  text-transform: capitalize;
+  font-family: 'Muli', sans-serif;
+  color: #333334;
+  font-size: 1.125em;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.append {
+  display: none;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #333334;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+body .content {
+  overflow-y: scroll !important;
+  height: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+body .contentPanel {
+  margin-top: 20px;
+  padding: 22px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fdfdfd;
+}
+
+body .contentPanel:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .contentPanel .date {
+  text-align: right;
+}
+
+.button,
+button {
+  border: none;
+  background-color: #7b1fa2;
+  color: #fdfdfd;
+  padding: 7px 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button:hover,
+button:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.button:focus,
+button:focus {
+  outline: none;
+}
+
+.topBar {
+  background-color: #4a0072;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+.topBar button {
+  float: right;
+  border: none;
+  background-color: #7b1fa2;
+  color: #fdfdfd;
+  padding: 4px 10px;
+}
+
+.topBar button:hover {
+  background-color: #ae52d4;
+}
+
+.topBar button:focus {
+  outline: none;
+}
+
+.sideMenu {
+  position: relative;
+  background-color: #7b1fa2;
+  height: 100%;
+  width: 200px;
+  display: inline-block;
+  padding-top: 60px;
+}
+
+.sideMenu .userIcon img {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #ae52d4 !important;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.sideMenu .userIcon .username {
+  font-size: 0.8em;
+  text-align: center;
+  color: #ae52d4;
+  margin-bottom: 34px;
+}
+
+.sideMenu .userIcon:hover p {
+  color: #fdfdfd;
+}
+
+.sideMenu .userIcon:hover img {
+  border: 2px solid #fdfdfd !important;
+}
+
+.sideMenu a {
+  font-size: 1.31em;
+  color: #ae52d4 !important;
+  display: block;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 10px;
+}
+
+.sideMenu a:hover {
+  color: #fdfdfd !important;
+  text-decoration: none;
+}
+
+.sideMenu a:visited {
+  text-decoration: none;
+  color: #E1E2E1;
+}
+
+.sideMenu a:focus {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+.sideMenu a:active {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+.sideNavButton {
+  z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sideNavButton:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sideNavButton p {
+  vertical-align: middle;
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 2.5em;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.widthOff {
+  width: 40px !important;
+}
+
+.widthOff .internal {
+  display: none;
+}
+
+.positionOff {
+  left: 10px !important;
+}
+
+.landingBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.landingBackground .loginMenu {
+  background-color: #fdfdfd;
+  z-index: 5;
+  margin: 100px auto;
+  width: 260px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.landingBackground .loginMenu:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.landingBackground .loginMenu .logo {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.landingBackground .loginMenu h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.landingBackground .loginMenu .loginData {
+  padding: 10px;
+}
+
+.landingBackground .loginMenu .input-group input {
+  margin: 10px;
+  width: 240px;
+}
+
+.fourfour {
+  width: 100%;
+  margin: 100px auto;
+  display: block;
+  padding: 5% 10%;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fourfour .maze {
+  width: 200px;
+  height: 200px;
+}
+
+.fourfour h2 {
+  text-align: center;
+  font-size: 5em;
+}
+
+.fourfour p {
+  text-align: center;
+}
+
+.fourfour img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.newReport #addcap {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.newReport .toolsList {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList .delete {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.newReport .toolsList input {
+  width: 100%;
+}
+
+.newReport .toolsList ul {
+  padding: 0px;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.newReport .toolsList ul li {
+  display: inline;
+}
+
+.newReport .toolsList ul li button {
+  width: 75px;
+}
+
+

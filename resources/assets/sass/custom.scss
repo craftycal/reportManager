@@ -1,0 +1,282 @@
+// purple primary
+$purpleDark : #4a0072;
+$purpleLight : #ae52d4;
+$purpleBase : #7b1fa2;
+
+// yellow secondary
+$yellowDark : #c79100;
+$yellowLight : #fff350;
+$yellowBase : #ffc107;
+
+// grey 
+$greyDark : #E1E2E1;
+$greyLight : #fdfdfd;
+$text : #333334;
+
+h1 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h2 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.5em;}
+h3 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.31em;}
+h4 { text-transform: capitalize; font-family: 'Kreon', sans-serif; color: $purpleLight; font-size: 1.125em;}
+h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; font-size: 1.125em;}
+
+.noPadding { padding: 0px; }
+
+.append { display: none;}   
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: $text;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  .content {
+    overflow-y: scroll !important;
+    height: 100%;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+  .contentPanel {
+    margin-top: 20px;
+    padding: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: $greyLight;
+    &:hover{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .date {
+      text-align: right;
+    }
+  }
+}
+
+.button, button {
+  border: none;
+  background-color: $purpleBase;
+  color: $greyLight;
+  padding: 7px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+// top bar styles
+.topBar {
+  background-color: $purpleDark;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  button {
+    float: right;
+    border: none;
+    background-color: $purpleBase;
+    color: $greyLight;
+    padding: 4px 10px;
+    &:hover {
+      background-color: $purpleLight;
+    }
+    &:focus  {
+      outline: none;
+    }
+  }
+}
+// ^ top bar styles end ^
+
+// side menu styles
+.sideMenu {
+  position: relative;
+  background-color: $purpleBase;
+  height: 100%;
+  width: 200px;
+  display: inline-block;
+  padding-top: 60px;
+  .userIcon {
+    img {
+      height: 100px;
+      width: 100px;
+      border: 2px solid $purpleLight !important;
+      border-radius: 25px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 4px;
+    }
+    .username {
+      font-size: 0.8em;
+      text-align: center;
+      color: $purpleLight;
+      margin-bottom: 34px;
+    }
+    &:hover {
+      p {
+        color: $greyLight;
+      }
+      img {
+        border: 2px solid $greyLight !important;
+      }
+    }
+  }
+  a {
+    font-size: 1.31em;
+    color: $purpleLight !important;
+    display: block;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 10px;
+    &:hover {
+      color: $greyLight !important;
+      text-decoration: none;
+    }
+    &:visited { text-decoration: none; color: $greyDark;}
+    &:focus { text-decoration: none;  color: $yellowBase;}
+    &:active { text-decoration: none; color: $yellowBase;}
+  } 
+}
+.sideNavButton {
+  z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  background-color: $yellowBase;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  p {
+    vertical-align: middle;
+    text-align: center;
+    color:  $greyLight;
+    font-size: 2.5em;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+.widthOff {
+  width: 40px !important;
+  .internal {
+    display: none; 
+  }
+}
+.positionOff { 
+  left: 10px !important;
+}
+// ^ side menu styles end ^
+
+// landing page 
+.landingBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .loginMenu {
+    background-color: $greyLight;
+    z-index: 5;
+    margin: 100px auto;
+    width: 260px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .logo {
+      width: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+    }
+    .loginData {
+      padding: 10px;
+    }
+    .input-group {
+      input {
+        margin: 10px;
+        width: 240px;
+      }
+    }
+  }
+}
+// ^ landing page styles end ^
+
+// 404
+.fourfour {
+width: 100%;
+margin: 100px auto;
+display: block;
+padding: 5% 10%;
+  background-color: $greyLight;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  .maze {
+    width: 200px;
+    height: 200px;
+  }
+  h2  {
+    text-align: center;
+    font-size: 5em;
+  }
+  p {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+.newReport {
+  #addcap {
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+  .toolsList {
+    margin-top:  20px; 
+    margin-bottom: 20px;
+    
+    .delete {
+      display: block;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+    input {
+      width: 100%;
+    }
+    
+    
+    ul {
+      padding: 0px;
+      list-style-type: none;
+      margin-bottom: 20px;
+      
+      li {
+        display: inline;
+        button {
+          width: 75px ;
+        }
+      }
+    }
+  }
+}

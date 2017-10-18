@@ -978,6 +978,10 @@ module.exports = __webpack_require__(43);
  */
 
 __webpack_require__(11);
+<<<<<<< HEAD
+=======
+__webpack_require__(35);
+>>>>>>> callum
 
 window.Vue = __webpack_require__(36);
 
@@ -31689,7 +31693,24 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 35 */,
+=======
+/* 35 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  // $( "#click" ).click(function() {
+  //   $( "#pop" ).toggle();
+  // });
+  $(".sideNavButton").click(function () {
+    $('.sideMenu').toggleClass('widthOff');
+    $('.sideNavButton').toggleClass('positionOff');
+  });
+});
+
+/***/ }),
+>>>>>>> callum
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
