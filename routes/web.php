@@ -29,9 +29,21 @@ Route::get('posts/create', function () {
     return view('posts/create', compact('post'));
 });
 
+Route::get('posts/delete', function () {
+    return view('posts/create', compact('post'));
+});
+
+Route::get('posts/edit', function () {
+    return view('posts/create', compact('post'));
+});
+
 Route::get('posts/create', 'PostsController@create');
+Route::get('posts/delete', 'PostsController@create');
+Route::get('posts/edit', 'PostsController@create');
 
 Route::post('post', 'PostsController@store');
+Route::post('delete', 'PostsController@destroy');
+Route::post('edit', 'PostsController@update');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -45,4 +57,5 @@ Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@
 Auth::routes();
 
 Route::resource('post','PostsController');
+Route::resource('delete','PostsController');
 

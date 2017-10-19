@@ -10,6 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -66,7 +67,7 @@
         </style>
     </head>
     <body>
-        <div>
+        <div class=" m-b-md">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -92,15 +93,25 @@
                         <a href="https://github.com/laravel/laravel">GitHub</a> -->
                     </div>
                     <br>
+                    <div class="row">
 
-                    @foreach ($posts as $key => $post)
+                        @foreach ($posts as $key => $post)
 
-                        <img src="{{ asset('storage/'. $post->image) }}" width="20%" />
-                        <p>{{ date("h:i:sa") }}</p>
+                        <div class="col-md-6">
+                            <h3>{{ $post->title }}</h3>
+                            <img src="{{ asset('storage/'. $post->image) }}" width="70%" />
+                            <p>Uploaded: {{ $post->created_at }}</p>
+                            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                            {!!Form::close() !!}
+                            <br>
+                            <hr width="5%">
+                        </div>
 
-                    @endforeach
+                        @endforeach
 
-                </div>
+                    </div>
             </div>
         </div>
     </body>

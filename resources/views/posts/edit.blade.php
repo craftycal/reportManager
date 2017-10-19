@@ -6,13 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Add Post</div>
-
-                @guest
-
-                <p style="padding: 30px">Log in to add stuff, yo!</p>
-
-                @else
+                <div class="panel-heading">Edit Post</div>
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -75,9 +69,6 @@
                     </div>
                   </form>
                 </div>
-
-                @endguest
-
             </div>
         </div>
     </div>

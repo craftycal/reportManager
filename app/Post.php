@@ -11,6 +11,7 @@ class Post extends Model
 		'title',
 		'image',
 		'author_id',
+		'excerpt',
 		'body',
 		'slug'];
 }

@@ -21,10 +21,10 @@ class PostsController extends Controller
     public function index()
     {
     
-        $post = Post::find($id);
+        // $post = Post::find($id);
 
       
-        return view('posts.create', compact('post'));
+        // return view('posts.create', compact('post'));
     }
 
     /**
@@ -49,8 +49,9 @@ class PostsController extends Controller
 
         $this->validate($request, [
             'title' => 'required|max:255',
-            'image' => 'required|image',
+            'image' => 'image',
             'author_id' => 'required|integer',
+            'excerpt' => '',
             'body' => 'required',
             'slug' => ''
         ]);
@@ -65,7 +66,7 @@ class PostsController extends Controller
 
         } else {
 
-            $filenameToStore = 'noimage.jpg';
+            $filenameToStore = 'posts/noimage.jpg';
 
         }
         // Create Post
@@ -73,6 +74,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->image = $filenameToStore;
         $post->body = $request->input('body');
+        $post->excerpt = $request->input('excerpt');
         $post->slug = $request->input('slug');
         $post->author_id = auth()->user()->id;
 
@@ -100,7 +102,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);     
+        return back()->with(compact('post'));
     }
 
     /**
@@ -123,6 +126,9 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        return back();
     }
 }
