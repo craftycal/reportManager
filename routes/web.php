@@ -37,7 +37,6 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('resizeImage', 'ImageController@resizeImage');
@@ -47,6 +46,3 @@ Auth::routes();
 
 Route::resource('post','PostsController');
 
-Route::any('form-submit', function(){
- 	return Input::file('file')->getClientOriginalName();
-});

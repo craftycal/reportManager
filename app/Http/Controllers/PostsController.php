@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Http\Requests\PostRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ImageController;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
@@ -42,19 +44,39 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostRequest $request)
+    public function store(Request $request)
     {
 
-        $post = $request->all();
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'image' => 'required|image',
+            'author_id' => 'required|integer',
+            'body' => 'required',
+            'slug' => ''
+        ]);
 
-        if($request->hasFile('file')){
+        if($request->hasFile('image')) {
 
-            $img = $request->file('image');
-            $img = Image::make($img)->save();
-            Storage::putFile('posts', new File('/public/storage'));
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $filenameToStore = 'posts/'.$filename.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/', $filenameToStore);
+
+        } else {
+
+            $filenameToStore = 'noimage.jpg';
+
         }
+        // Create Post
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->image = $filenameToStore;
+        $post->body = $request->input('body');
+        $post->slug = $request->input('slug');
+        $post->author_id = auth()->user()->id;
 
-        Post::create($post);
+        $post->save();
 
         return back()->with('success', 'Post has been added');
     }

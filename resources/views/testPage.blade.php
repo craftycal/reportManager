@@ -1,3 +1,4 @@
+<?php date_default_timezone_set("Pacific/Auckland") ?>
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -65,7 +66,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -78,29 +79,27 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Test Page
-                </div>
+                    <div class="title m-b-md">
+                        Test Page
+                    </div>
 
-                <div class="links">
-                    <a href="{{ url('/') }}">Default</a>
-                    <a href="{{ url('posts/create') }}">Test Entries</a>
-                    <!-- <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a> -->
-                </div>
-                <br>
-                <div style="width: 70%; margin: 0 auto">
+                    <div class="links">
+                        <a href="{{ url('/') }}">Default</a>
+                        <a href="{{ url('posts/create') }}">Test Entries</a>
+                        <!-- <a href="https://laracasts.com">Laracasts</a>
+                        <a href="https://laravel-news.com">News</a>
+                        <a href="https://forge.laravel.com">Forge</a>
+                        <a href="https://github.com/laravel/laravel">GitHub</a> -->
+                    </div>
+                    <br>
 
-                    <?php date_default_timezone_set("Pacific/Auckland") ?>
+                    @foreach ($posts as $key => $post)
 
-                    @foreach ($posts as $key => $post) 
-
-                    <img src="{{ asset('storage/'. $post->image) }}" width="25%" />
-                    <p>{{ date("h:i:sa") }}</p>
+                        <img src="{{ asset('storage/'. $post->image) }}" width="20%" />
+                        <p>{{ date("h:i:sa") }}</p>
 
                     @endforeach
+
                 </div>
             </div>
         </div>
