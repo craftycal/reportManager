@@ -99,8 +99,11 @@
 
                         <div class="col-md-6">
                             <h3>{{ $post->title }}</h3>
+                            <p>{{ $post->excerpt }}</p>
                             <img src="{{ asset('storage/'. $post->image) }}" width="70%" />
                             <p>Uploaded: {{ $post->created_at }}</p>
+                            {{ $post->body }}
+                            <br><br>
                             {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
                                 {{Form::hidden('_method', 'DELETE')}}
                                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
