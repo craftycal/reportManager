@@ -8697,3 +8697,167 @@ button:focus {
   width: 75px;
 }
 
+.newReportForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.helpPopButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  border-radius: 50%;
+  background-color: #ffc107;
+  width: 20px;
+  height: 20px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.helpPopButton:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.helpPopButton p {
+  vertical-align: middle;
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 1em;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E1E2E1;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+
+label {
+  color: #E1E2E1;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #ae52d4;
+}
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ae52d4;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.toolsList {
+  top: 200px;
+  position: fixed;
+}
+

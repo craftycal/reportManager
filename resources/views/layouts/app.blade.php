@@ -6,6 +6,7 @@
   <title>Report Manager</title>
   <link rel="shortcut icon" type="image/png" href="..\resources\assets\img\RM_small.png">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Kreon|Muli" rel="stylesheet">
   <script type="text/javascript" src="js/app.js"></script>
   
