@@ -8350,49 +8350,6 @@ button.close {
   }
 }
 
-h1 {
-  text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
-  color: #ae52d4;
-  font-size: 1.5em;
-}
-
-h2 {
-  text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
-  color: #ae52d4;
-  font-size: 1.5em;
-}
-
-h3 {
-  text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
-  color: #ae52d4;
-  font-size: 1.31em;
-}
-
-h4 {
-  text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
-  color: #ae52d4;
-  font-size: 1.125em;
-}
-
-h5 {
-  text-transform: capitalize;
-  font-family: 'Muli', sans-serif;
-  color: #333334;
-  font-size: 1.125em;
-}
-
-.noPadding {
-  padding: 0px;
-}
-
-.append {
-  display: none;
-}
-
 body {
   font-family: 'Muli', sans-serif;
   color: #333334;
@@ -8430,6 +8387,49 @@ body .contentPanel .date {
   text-align: right;
 }
 
+body .noPadding {
+  padding: 0px;
+}
+
+body .append {
+  display: none;
+}
+
+body h1 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+body h2 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.5em;
+}
+
+body h3 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.31em;
+}
+
+body h4 {
+  text-transform: capitalize;
+  font-family: 'Kreon', sans-serif;
+  color: #ae52d4;
+  font-size: 1.125em;
+}
+
+body h5 {
+  text-transform: capitalize;
+  font-family: 'Muli', sans-serif;
+  color: #333334;
+  font-size: 1.125em;
+}
+
 .button,
 button {
   border: none;
@@ -8446,11 +8446,128 @@ button {
 button:hover {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+  color: #fdfdfd;
 }
 
 .button:focus,
 button:focus {
   outline: none;
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+  /* HIGHLIGHTER ================================== */
+  /* active state */
+  /* ANIMATIONS ================ */
+}
+
+.group input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #a8a8a8;
+}
+
+.group input:focus {
+  outline: none;
+}
+
+.group label {
+  color: #a8a8a8;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.group input:focus ~ label,
+.group input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #ae52d4;
+}
+
+.group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.group .bar:before,
+.group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ae52d4;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.group .bar:before {
+  left: 50%;
+}
+
+.group .bar:after {
+  right: 50%;
+}
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.group .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.group input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 .topBar {
@@ -8462,7 +8579,7 @@ button:focus {
   height: 30px;
 }
 
-.topBar button {
+.topBar .button {
   float: right;
   border: none;
   background-color: #7b1fa2;
@@ -8470,15 +8587,15 @@ button:focus {
   padding: 4px 10px;
 }
 
-.topBar button:hover {
+.topBar .button:hover {
   background-color: #ae52d4;
 }
 
-.topBar button:focus {
+.topBar .button:focus {
   outline: none;
 }
 
-.sideMenu {
+.sideBar .sideMenu {
   position: relative;
   background-color: #7b1fa2;
   height: 100%;
@@ -8487,7 +8604,7 @@ button:focus {
   padding-top: 60px;
 }
 
-.sideMenu .userIcon img {
+.sideBar .sideMenu .userIcon img {
   height: 100px;
   width: 100px;
   border: 2px solid #ae52d4 !important;
@@ -8497,23 +8614,23 @@ button:focus {
   margin-bottom: 4px;
 }
 
-.sideMenu .userIcon .username {
+.sideBar .sideMenu .userIcon .username {
   font-size: 0.8em;
   text-align: center;
   color: #ae52d4;
   margin-bottom: 34px;
 }
 
-.sideMenu .userIcon:hover p {
+.sideBar .sideMenu .userIcon:hover p {
   color: #fdfdfd;
 }
 
-.sideMenu .userIcon:hover img {
+.sideBar .sideMenu .userIcon:hover img {
   border: 2px solid #fdfdfd !important;
 }
 
-.sideMenu a {
-  font-size: 1.31em;
+.sideBar .sideMenu a {
+  font-size: 1em;
   color: #ae52d4 !important;
   display: block;
   margin-left: 22px;
@@ -8521,27 +8638,27 @@ button:focus {
   margin-bottom: 10px;
 }
 
-.sideMenu a:hover {
+.sideBar .sideMenu a:hover {
   color: #fdfdfd !important;
   text-decoration: none;
 }
 
-.sideMenu a:visited {
+.sideBar .sideMenu a:visited {
   text-decoration: none;
   color: #a8a8a8;
 }
 
-.sideMenu a:focus {
+.sideBar .sideMenu a:focus {
   text-decoration: none;
   color: #ffc107;
 }
 
-.sideMenu a:active {
+.sideBar .sideMenu a:active {
   text-decoration: none;
   color: #ffc107;
 }
 
-.sideNavButton {
+.sideBar .sideNavButton {
   z-index: 6;
   position: absolute;
   top: 50%;
@@ -8556,13 +8673,13 @@ button:focus {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.sideNavButton:hover {
+.sideBar .sideNavButton:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.sideNavButton p {
+.sideBar .sideNavButton p {
   vertical-align: middle;
   text-align: center;
   color: #fdfdfd;
@@ -8572,15 +8689,15 @@ button:focus {
   height: 60px;
 }
 
-.widthOff {
+.sideBar .widthOff {
   width: 40px !important;
 }
 
-.widthOff .internal {
+.sideBar .widthOff .internal {
   display: none;
 }
 
-.positionOff {
+.sideBar .positionOff {
   left: 10px !important;
 }
 
@@ -8664,18 +8781,34 @@ button:focus {
   margin-bottom: 5px;
 }
 
+.newReport .newReportForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.newReport .newReportForm .submitButton {
+  width: 250px !important;
+  margin: 0 auto;
+}
+
+.newReport .newReportForm .delete {
+  margin-top: 10px;
+  float: right;
+  color: #a8a8a8;
+}
+
+.newReport .newReportForm .delete:hover {
+  color: #333334;
+  cursor: pointer;
+}
+
 .newReport .toolsList {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.newReport .toolsList textarea {
-  width: 100%;
-  height: 100px;
-}
-
-.newReport .toolsList input {
-  width: 100%;
+  top: 185px;
+  position: fixed;
 }
 
 .newReport .toolsList ul {
@@ -8693,25 +8826,7 @@ button:focus {
   width: 75px;
 }
 
-.delete {
-  margin-top: 10px;
-  float: right;
-  color: #a8a8a8;
-}
-
-.delete:hover {
-  color: #333334;
-  cursor: pointer;
-}
-
-.newReportForm {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.helpPopButton {
+.newReport .helpPopButton {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -8726,13 +8841,13 @@ button:focus {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.helpPopButton:hover {
+.newReport .helpPopButton:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.helpPopButton p {
+.newReport .helpPopButton p {
   vertical-align: middle;
   text-align: center;
   color: #fdfdfd;
@@ -8740,134 +8855,5 @@ button:focus {
   margin: 0;
   width: 20px;
   height: 20px;
-}
-
-.group {
-  position: relative;
-  margin-bottom: 45px;
-}
-
-.group input {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #a8a8a8;
-}
-
-.group input:focus {
-  outline: none;
-}
-
-.group label {
-  color: #a8a8a8;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-/* active state */
-
-input:focus ~ label,
-input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #ae52d4;
-}
-
-/* BOTTOM BARS ================================= */
-
-.bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.bar:before,
-.bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #ae52d4;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.bar:before {
-  left: 50%;
-}
-
-.bar:after {
-  right: 50%;
-}
-
-/* active state */
-
-input:focus ~ .bar:before,
-input:focus ~ .bar:after {
-  width: 50%;
-}
-
-/* HIGHLIGHTER ================================== */
-
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-/* active state */
-
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-
-/* ANIMATIONS ================ */
-
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #5264AE;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-@keyframes inputHighlighter {
-  from {
-    background: #5264AE;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-.submitButton {
-  width: 250px !important;
-  margin: 0 auto;
-}
-
-.toolsList {
-  top: 185px;
-  position: fixed;
 }
 

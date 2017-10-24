@@ -11,25 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', 'PagesController@landing');
+Route::get('/landing', 'PagesController@landing');
+Route::get('/userHome', 'PagesController@userHome');
+Route::get('/newReport', 'PagesController@newReport');
+Route::get('/error', 'PagesController@error');
+Route::get('/viewReport', 'PagesController@viewReport');
 
-Route::get('/newReport', function () {
-    return view('newReport');
-});
+Route::resource('post', 'postController');
 
-Route::get('/viewReport', function () {
-    return view('viewReport');
-});
-
-Route::get('/404', function () {
-    return view('404');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
+// 
+// Route::get('/', function () {
+//     return view('landing');
+// });
+// 
+// Route::get('/newReport', function () {
+//     return view('newReport');
+// });
+// 
+// Route::get('/viewReport', function () {
+//     return view('viewReport');
+// });
+// 
+// Route::get('/404', function () {
+//     return view('404');
+// });
+// 
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 
 
