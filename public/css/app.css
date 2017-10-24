@@ -8689,6 +8689,7 @@ button:focus {
 }
 
 .newReport .toolsList ul li button {
+  margin-bottom: 10px;
   width: 75px;
 }
 
