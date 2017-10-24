@@ -30,7 +30,8 @@
                     </div><br>
                 @endif
 
-                <div class="panel-body">
+                <div class="panel-body"> 
+
                   <form method="post" action="{{url('post')}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="row">
@@ -82,4 +83,4 @@
         </div>
     </div>
 </div>
-@endsection
+@overwrite

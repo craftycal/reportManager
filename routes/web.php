@@ -37,13 +37,16 @@ Route::get('posts/delete', function () {
     return view('posts/create', compact('post'));
 });
 
-Route::get('posts/edit', function () {
-    return view('posts/create', compact('post'));
+Route::get('posts/edit/{id}', function () {
+
+	$posts = DB::table('posts')->get();
+	$id = DB::table('posts')->get(id);
+    return view('posts/edit', compact('posts'));
 });
 
 Route::get('posts/create', 'PostsController@create');
 Route::get('posts/delete', 'PostsController@create');
-Route::get('posts/edit', 'PostsController@create');
+Route::get('posts/edit/{id}', 'PostsController@edit');
 
 Route::post('post', 'PostsController@store');
 Route::post('delete', 'PostsController@destroy');
@@ -61,5 +64,5 @@ Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@
 Auth::routes();
 
 Route::resource('post','PostsController');
-Route::resource('delete','PostsController');
+
 

@@ -90,6 +90,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a> -->
                     <a href="{{ url('/testPage') }}">Test Page</a>
                     <a href="{{ url('posts/create') }}">Test Entries</a>
+                    <a href="{{ url('/chart') }}">Chart</a>
                 </div>
             </div>
         </div>

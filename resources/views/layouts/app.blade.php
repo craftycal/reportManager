@@ -34,6 +34,7 @@
                     </a>
                     <a class="navbar-brand" href="{{ url('/testPage') }}">Test Page</a>
                     <a class="navbar-brand" href="{{ url('posts/create') }}">Test Entries</a>
+                    <a class="navbar-brand" href="{{ url('/chart') }}">Chart</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -74,6 +75,7 @@
         </nav>
 
         @yield('content')
+        
     </div>
 
     <!-- Scripts -->

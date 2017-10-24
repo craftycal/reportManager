@@ -91,7 +91,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit'.[$id])->with(compact('post'));
+
     }
 
     /**
@@ -102,8 +104,12 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);     
-        return back()->with(compact('post'));
+        $post = Post::find($id);
+        // Check for correct user
+        // if(auth()->user()->id !==$post->user_id){
+        //     return redirect('/posts')->with('error', 'Unauthorized Page');
+        // }     
+        return view('posts.edit')->with(compact('post'));
     }
 
     /**
@@ -115,7 +121,40 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'image' => 'image',
+            'author_id' => 'required|integer',
+            'excerpt' => '',
+            'body' => 'required',
+            'slug' => ''
+        ]);
+
+        if($request->hasFile('image')) {
+
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $filenameToStore = 'posts/'.$filename.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/', $filenameToStore);
+
+        } else {
+
+            $filenameToStore = 'posts/noimage.jpg';
+
+        }
+        // Create Post
+        $post = Post::find($id);
+        $post->title = $request->input('title');
+        $post->image = $filenameToStore;
+        $post->body = $request->input('body');
+        $post->excerpt = $request->input('excerpt');
+        $post->slug = $request->input('slug');
+        $post->author_id = auth()->user()->id;
+
+        $post->save();
+
+        return back()->with('success', 'Post has been edited');
     }
 
     /**

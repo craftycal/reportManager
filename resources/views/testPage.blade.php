@@ -87,6 +87,7 @@
                     <div class="links">
                         <a href="{{ url('/') }}">Default</a>
                         <a href="{{ url('posts/create') }}">Test Entries</a>
+                        <a href="{{ url('/chart') }}">Chart</a>
                         <!-- <a href="https://laracasts.com">Laracasts</a>
                         <a href="https://laravel-news.com">News</a>
                         <a href="https://forge.laravel.com">Forge</a>
@@ -109,6 +110,7 @@
                                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
                             {!!Form::close() !!}
                             <br>
+                            <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
                             <hr width="5%">
                         </div>
 
