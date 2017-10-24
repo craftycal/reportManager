@@ -1,5 +1,7 @@
 @include('inc.topBar')
 @include('inc.sideBar')
+@include('inc.chartModal')
+@include('inc.tableModal')
 @extends('layouts/app') 
 @section('content')
 <div class="content">
@@ -7,7 +9,6 @@
     
     <div class="contentPanel col-xs-10 col-xs-offset-1" style="min-height: 500px;">
       <h2>New Report</h2>
-      
       <div class="helpPopButton" data-toggle="modal" data-target="#myModal">
         <p><b>?</b></p>
       </div>
@@ -29,10 +30,10 @@
           </div>
         </div>
       </div>
-      
       <div class="row">
         <div class=" col-xs-10">
-          <form class="newReportForm" action="index.html" method="post">
+          <form action="#" method="post">
+          <div class="newReportForm">
             <div class="group">      
               <input type="text" required>
               <span class="highlight"></span>
@@ -45,6 +46,10 @@
               <span class="bar"></span>
               <label>Date</label>
             </div>
+          </div>
+            <div class="group"> 
+              <input class="submitButton button" type="submit" name="" value="submit">
+            </div>
           </form>
         </div>
         <div class="col-xs-1">
@@ -53,13 +58,12 @@
               <li><button class="add_heading" type="button" name="button"><i class="fa fa-header" aria-hidden="true"></i> <sup><b>+</b></sup></button></li><br><br>
               <li><button class="add_form_field" type="button" name="button">text <sup><b>+</b></sup></button></li><br><br>
               <li><button class="add_image "type="button" name="button"><i class="fa fa-picture-o" aria-hidden="true"></i> <sup><b>+</b></sup></button></li><br><br>
-              <li><button type="button" name="button"><i class="fa fa-bar-chart" aria-hidden="true"></i> <sup><b>+</b></sup></button></li><br><br>
-              <li><button type="button" name="button"><i class="fa fa-table" aria-hidden="true"></i> <sup><b>+</b></sup></button></li>
+              <li><button type="button" name="button" data-toggle="modal" data-target="#chartModal"><i class="fa fa-bar-chart" aria-hidden="true"></i> <sup><b>+</b></sup></button></li><br><br>
+              <li><button type="button" name="button" data-toggle="modal" data-target="#tableModal"><i class="fa fa-table" aria-hidden="true"></i> <sup><b>+</b></sup></button></li>
             </ul>
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </div>
@@ -68,18 +72,18 @@
 
 <script>
 $(document).ready(function() {
-  var max_fields      = 100;
-  var wrapper         = $(".newReportForm");
+  var max_fields               = 100;
+  var wrapper                  = $(".newReportForm");
   var add_button_textarea      = $(".add_form_field");
-  var add_heading      = $(".add_heading");
-  var add_image      = $(".add_image");
+  var add_heading              = $(".add_heading");
+  var add_image                = $(".add_image");
   
   var x = 1;
   $(add_button_textarea).click(function(e){
     e.preventDefault();
     if(x < max_fields){
       x++;
-      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>text box</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>');
+      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>Text Box</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>');
     }
   });
   
@@ -87,7 +91,7 @@ $(document).ready(function() {
     e.preventDefault();
     if(x < max_fields){
       x++;
-      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>heading</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
+      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>Heading</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
     }
     else
     {
@@ -99,7 +103,7 @@ $(document).ready(function() {
     e.preventDefault();
     if(x < max_fields){
       x++;
-      $(wrapper).append('<div><input type="file" name="pic" accept="image/*"><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
+      $(wrapper).append('<div class="group"><input type="file" name="pic" accept="image/*"><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
     }
   });
   

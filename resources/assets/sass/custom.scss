@@ -9,7 +9,7 @@ $yellowLight : #fff350;
 $yellowBase : #ffc107;
 
 // grey 
-$greyDark : #E1E2E1;
+$greyDark : #a8a8a8;
 $greyLight : #fdfdfd;
 $text : #333334;
 
@@ -21,7 +21,7 @@ h5 { text-transform: capitalize; font-family: 'Muli', sans-serif; color: $text; 
 
 .noPadding { padding: 0px; }
 
-.append { display: none;}   
+.append { display: none; }   
 
 body {
   font-family: 'Muli', sans-serif;
@@ -252,11 +252,6 @@ body {
   .toolsList {
     margin-top:  20px; 
     margin-bottom: 20px;
-    
-    .delete {
-      display: block;
-      margin-bottom: 20px;
-    }
     textarea {
       width: 100%;
       height: 100px;
@@ -264,13 +259,10 @@ body {
     input {
       width: 100%;
     }
-    
-    
     ul {
       padding: 0px;
       list-style-type: none;
       margin-bottom: 20px;
-      
       li {
         display: inline;
         button {
@@ -281,16 +273,22 @@ body {
   }
 }
 
+.delete {
+  margin-top: 10px;
+  float: right;
+  color: $greyDark;
+  &:hover {
+    color: $text;
+    cursor: pointer;
+  }
+}
 
 .newReportForm {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
-
 }
-
-
 
 .helpPopButton {
   position: absolute;
@@ -318,43 +316,34 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-.group 			  { 
+.group { 
   position:relative; 
   margin-bottom:45px; 
+  input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid $greyDark ;
+    &:focus { 
+      outline:none; 
+    }
+  }
+  label {
+    color: $greyDark ; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
 }
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width: 100%;
-  border:none;
-  border-bottom:1px solid $greyDark ;
-}
-input:focus 		{ outline:none; }
 
-/* LABEL ======================================= */
-label 				 {
-  color: $greyDark ; 
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
 
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
@@ -408,20 +397,25 @@ input:focus ~ .highlight {
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
+  from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-	from { background:#5264AE; }
+  from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
 @keyframes inputHighlighter {
-	from { background:#5264AE; }
+  from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
 
 
+.submitButton {
+  width: 250px !important;
+  margin: 0 auto;
+}
+
 .toolsList {
-  top: 200px;
- position: fixed;
+  top: 185px;
+  position: fixed;
 }

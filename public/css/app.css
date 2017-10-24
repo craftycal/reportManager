@@ -8528,7 +8528,7 @@ button:focus {
 
 .sideMenu a:visited {
   text-decoration: none;
-  color: #E1E2E1;
+  color: #a8a8a8;
 }
 
 .sideMenu a:focus {
@@ -8669,11 +8669,6 @@ button:focus {
   margin-bottom: 20px;
 }
 
-.newReport .toolsList .delete {
-  display: block;
-  margin-bottom: 20px;
-}
-
 .newReport .toolsList textarea {
   width: 100%;
   height: 100px;
@@ -8695,6 +8690,17 @@ button:focus {
 
 .newReport .toolsList ul li button {
   width: 75px;
+}
+
+.delete {
+  margin-top: 10px;
+  float: right;
+  color: #a8a8a8;
+}
+
+.delete:hover {
+  color: #333334;
+  cursor: pointer;
 }
 
 .newReportForm {
@@ -8740,23 +8746,21 @@ button:focus {
   margin-bottom: 45px;
 }
 
-input {
+.group input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #E1E2E1;
+  border-bottom: 1px solid #a8a8a8;
 }
 
-input:focus {
+.group input:focus {
   outline: none;
 }
 
-/* LABEL ======================================= */
-
-label {
-  color: #E1E2E1;
+.group label {
+  color: #a8a8a8;
   font-size: 18px;
   font-weight: normal;
   position: absolute;
@@ -8856,8 +8860,13 @@ input:focus ~ .highlight {
   }
 }
 
+.submitButton {
+  width: 250px !important;
+  margin: 0 auto;
+}
+
 .toolsList {
-  top: 200px;
+  top: 185px;
   position: fixed;
 }
 
