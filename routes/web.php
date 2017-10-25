@@ -22,10 +22,8 @@ Route::get('/chart', function () {
 Route::get('testPage', function () {
 
 	$posts = DB::table('posts')->get();
-    return view('testPage', ['posts' => $posts]);
-
 	$users = DB::table('users')->get();
-    return view('testPage', ['users' => $users]);
+    return view('testPage', compact('posts', 'users'));
 
 });
 

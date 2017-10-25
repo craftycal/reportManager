@@ -21,7 +21,7 @@
                                 <li>{{ $error }}</li>
                             @endforeach
                         </ul>
-                    </div><br>
+                    </div>
                 @endif
 
                 @if (\Session::has('success'))
@@ -51,7 +51,7 @@
                      <div class="form-group">
                           {{Form::label('image', 'Current image')}}
                           <br>
-                          <img src="{{ asset('storage/'. $post->image) }}" width="70%" />
+                          <img src="{{ asset('storage/'. $post->image) }}" width="50%" />
                           <br>
                           <br>
                           {{Form::file('image')}}

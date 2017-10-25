@@ -106,9 +106,9 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         // Check for correct user
-        // if(auth()->user()->id !==$post->user_id){
-        //     return redirect('/posts')->with('error', 'Unauthorized Page');
-        // }     
+        if(auth()->user()->id !==$post->author_id){
+            abort(567);
+        }     
         return view('posts.edit')->with(compact('post'));
     }
 
@@ -140,7 +140,8 @@ class PostsController extends Controller
 
         } else {
 
-            $filenameToStore = 'posts/noimage.jpg';
+            $post = Post::find($id);
+            $filenameToStore = $post->image;
 
         }
         // Create Post

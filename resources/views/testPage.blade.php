@@ -94,29 +94,42 @@
                         <a href="https://github.com/laravel/laravel">GitHub</a> -->
                     </div>
                     <br>
-                    <div class="row">
 
-                        @foreach ($posts as $key => $post)
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div><br>
+                        @endif
 
-                        <div class="col-md-6">
+                        @foreach ($posts as $post)
+
+                        <div class="m-b-md" style="width: 40%; margin: 0 auto">
                             <h3>{{ $post->title }}</h3>
                             <p>{{ $post->excerpt }}</p>
                             <img src="{{ asset('storage/'. $post->image) }}" width="70%" />
-                            <p>Uploaded: {{ $post->created_at }}</p>
+                            <p>Uploaded: {{ $post->created_at }} </p>
                             {{ $post->body }}
                             <br><br>
-                            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
-                                {{Form::hidden('_method', 'DELETE')}}
-                                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-                            {!!Form::close() !!}
-                            <br>
-                            <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
+                            <div class="row">
+                                <div class="col-md-6" align="right"> 
+                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
+                                        {{Form::hidden('_method', 'DELETE')}}
+                                        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                    {!!Form::close() !!}
+                                </div>
+                                <div class="col-md-6" align="left">
+                                    <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
+                                </div>
+                            </div>
                             <hr width="5%">
                         </div>
 
                         @endforeach
 
-                    </div>
             </div>
         </div>
     </body>
