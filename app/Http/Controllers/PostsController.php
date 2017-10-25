@@ -165,6 +165,6 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return back();
+        return back()->with('success', 'POST HAS BEEN DELETED!');
     }
 }

@@ -27,26 +27,26 @@
                 @if (\Session::has('success'))
                     <div class="alert alert-success">
                         <p>{{ \Session::get('success') }}</p>
-                    </div><br>
+                    </div>
                 @endif
 
                 <div class="panel-body"> 
                     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'files' => true]) !!}
                      <div class="form-group">
                           {{Form::label('title', 'Title')}}
-                          {{Form::text('title', ['class' => 'form-control'])}}
+                          {{Form::text('title', null, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('excerpt', 'Excerpt')}}
-                          {{Form::text('excerpt', ['class' => 'form-control'])}}
+                          {{Form::text('excerpt', null, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('body', 'Body')}}
-                          {{Form::textarea('body', ['class' => 'form-control'])}}
+                          {{Form::textarea('body', null, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('slug', 'Slug')}}
-                          {{Form::text('slug', ['class' => 'form-control'])}}
+                          {{Form::text('slug', null, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('image', 'Image')}}

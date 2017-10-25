@@ -28,7 +28,9 @@ Route::get('testPage', function () {
 });
 
 Route::get('posts/create', function () {
-    return view('posts/create', compact('post'));
+
+	$posts = DB::table('posts')->get();
+    return view('posts/create', compact('posts'));
 });
 
 Route::get('posts/delete', function () {

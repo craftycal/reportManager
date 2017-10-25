@@ -95,6 +95,12 @@
                     </div>
                     <br>
 
+                    @if (\Session::has('success'))
+                        <div class="alert alert-danger" style="width: 30%; margin: 0 auto">
+                            <h4>{{ \Session::get('success') }}</h4>
+                        </div>
+                    @endif
+
                     @foreach ($posts as $post)
 
                     <div class="m-b-md" style="width: 40%; margin: 0 auto">
