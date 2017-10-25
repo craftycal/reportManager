@@ -34,7 +34,7 @@
             </div>
           </form>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-1 col-xs-offset-1">
           <div class="toolsList">
             <ul>
               <li><button class="add_heading" type="button" name="button"><i class="fa fa-header" aria-hidden="true"></i> <sup><b>+</b></sup></button></li><br>

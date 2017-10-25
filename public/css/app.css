@@ -8351,7 +8351,7 @@ button.close {
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333334;
   position: absolute;
   top: 0;
@@ -8397,35 +8397,36 @@ body .append {
 
 body h1 {
   text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #ae52d4;
   font-size: 1.5em;
 }
 
 body h2 {
+  margin-top: 11px;
   text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #ae52d4;
   font-size: 1.5em;
 }
 
 body h3 {
   text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #ae52d4;
   font-size: 1.31em;
 }
 
 body h4 {
   text-transform: capitalize;
-  font-family: 'Kreon', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #ae52d4;
   font-size: 1.125em;
 }
 
 body h5 {
   text-transform: capitalize;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333334;
   font-size: 1.125em;
 }
@@ -8469,7 +8470,7 @@ button:focus {
 }
 
 .group input {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 100%;
@@ -8483,7 +8484,7 @@ button:focus {
 
 .group label {
   color: #a8a8a8;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
@@ -8823,6 +8824,7 @@ button:focus {
 
 .newReport .toolsList ul li button {
   width: 75px;
+  margin-bottom: 10px;
 }
 
 .newReport .helpPopButton {
