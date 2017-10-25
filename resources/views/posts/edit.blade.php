@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Edit Post: {{ $post->title }}</div>
+                <div class="panel-heading"><h4>Edit Post</h4></div>
 
                 @guest
 
@@ -38,7 +38,7 @@
                      </div>
                      <div class="form-group">
                           {{Form::label('excerpt', 'Excerpt')}}
-                          {{Form::textarea('excerpt', $post->excerpt, ['class' => 'form-control'])}}
+                          {{Form::text('excerpt', $post->excerpt, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('body', 'Body')}}
@@ -46,19 +46,19 @@
                      </div>
                      <div class="form-group">
                           {{Form::label('slug', 'Slug')}}
-                          {{Form::textarea('slug', $post->slug, ['class' => 'form-control'])}}
+                          {{Form::text('slug', $post->slug, ['class' => 'form-control'])}}
                      </div>
                      <div class="form-group">
                           {{Form::label('image', 'Current image')}}
                           <br>
-                          <img src="{{ asset('storage/'. $post->image) }}" width="50%" />
+                          <img src="{{ asset('storage/'. $post->image) }}" width="30%" />
                           <br>
                           <br>
                           {{Form::file('image')}}
                      </div>
                      {{Form::hidden('_method', 'PUT')}}
                      {{Form::hidden( 'author_id', Auth::id() )}}
-                     {{Form::submit('Submit edit', ['class' => 'btn btn-primary'])}}
+                     {{Form::submit('Edit Post', ['class' => 'btn btn-primary'])}}
                   {!! Form::close() !!} 
                   <!-- <form method="POST" action="{{ url('edit') }}" enctype="multipart/form-data">
                     {{csrf_field()}}

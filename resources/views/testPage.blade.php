@@ -95,40 +95,41 @@
                     </div>
                     <br>
 
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div><br>
+                    @foreach ($posts as $post)
+
+                    <div class="m-b-md" style="width: 40%; margin: 0 auto">
+                        <h3>{{ $post->title }}</h3>
+                        <p>{{ $post->excerpt }}</p>
+                        <img src="{{ asset('storage/'. $post->image) }}" width="50%" />
+                        <p>Uploaded: {{ $post->created_at }} </p>
+                        {{ $post->body }}
+                        <br>
+
+                        @if ((Auth::check()) && (auth()->user()->id ==$post->author_id))
+
+                            <div style="display: inline-block; margin: 10px">
+
+                                {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                {!!Form::close() !!}
+
+                            </div>
+
+                            <div style="display: inline-block; margin: 10px"">
+
+                                <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
+
+                            </div>
+                        @else
+
                         @endif
 
-                        @foreach ($posts as $post)
+                    </div>
 
-                        <div class="m-b-md" style="width: 40%; margin: 0 auto">
-                            <h3>{{ $post->title }}</h3>
-                            <p>{{ $post->excerpt }}</p>
-                            <img src="{{ asset('storage/'. $post->image) }}" width="70%" />
-                            <p>Uploaded: {{ $post->created_at }} </p>
-                            {{ $post->body }}
-                            <br><br>
-                            <div class="row">
-                                <div class="col-md-6" align="right"> 
-                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
-                                        {{Form::hidden('_method', 'DELETE')}}
-                                        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-                                    {!!Form::close() !!}
-                                </div>
-                                <div class="col-md-6" align="left">
-                                    <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
-                                </div>
-                            </div>
-                            <hr width="5%">
-                        </div>
+                    <hr width="5%">
 
-                        @endforeach
+                    @endforeach
 
             </div>
         </div>

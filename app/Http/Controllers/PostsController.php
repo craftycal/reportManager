@@ -104,11 +104,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);
-        // Check for correct user
-        if(auth()->user()->id !==$post->author_id){
-            abort(567);
-        }     
+        $post = Post::find($id);     
         return view('posts.edit')->with(compact('post'));
     }
 
