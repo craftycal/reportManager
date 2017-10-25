@@ -53,7 +53,7 @@
                           {{Form::file('image')}}
                      </div>
                      {{Form::hidden( 'author_id', Auth::id() )}}
-                     {{Form::submit('Create Post', ['class' => 'btn btn-primary'])}}
+                     {{Form::button('<i class="glyphicon glyphicon-ok"></i> Create Post', array('type' => 'submit', 'class' => 'btn btn-success'))}}
                   {!! Form::close() !!} 
                   <!-- <form method="post" action="{{url('post')}}" enctype="multipart/form-data">
                     {{csrf_field()}}

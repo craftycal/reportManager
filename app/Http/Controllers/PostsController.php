@@ -80,7 +80,7 @@ class PostsController extends Controller
 
         $post->save();
 
-        return back()->with('success', 'Post has been added');
+        return back()->with('success', 'Post has been created');
     }
 
     /**

@@ -117,14 +117,14 @@
 
                                 {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
-                                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                    {{Form::button('<i class="glyphicon glyphicon-trash"></i> Delete', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                                 {!!Form::close() !!}
 
                             </div>
 
                             <div style="display: inline-block; margin: 10px"">
 
-                                <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default">Edit</a>
+                                <a href="{{ url('/posts/edit/'.$post->id) }}" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Edit</a>
 
                             </div>
                         @else

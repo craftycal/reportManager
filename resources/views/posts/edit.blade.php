@@ -58,7 +58,7 @@
                      </div>
                      {{Form::hidden('_method', 'PUT')}}
                      {{Form::hidden( 'author_id', Auth::id() )}}
-                     {{Form::submit('Edit Post', ['class' => 'btn btn-primary'])}}
+                     {{Form::button('<i class="glyphicon glyphicon-ok"></i> Edit Post', array('type' => 'submit', 'class' => 'btn btn-success'))}}
                   {!! Form::close() !!} 
                   <!-- <form method="POST" action="{{ url('edit') }}" enctype="multipart/form-data">
                     {{csrf_field()}}
