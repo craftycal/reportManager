@@ -8458,117 +8458,18 @@ button:focus {
   color: #fdfdfd;
 }
 
-.group {
-  position: relative;
-  margin-bottom: 45px;
-  /* active state */
-  /* BOTTOM BARS ================================= */
-  /* active state */
-  /* HIGHLIGHTER ================================== */
-  /* active state */
-  /* ANIMATIONS ================ */
+.mui-textfield > input:focus,
+.mui-textfield > textarea:focus {
+  border-color: #7b1fa2 !important;
 }
 
-.group input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #a8a8a8;
+.mui-textfield > input:focus ~ label,
+.mui-textfield > textarea:focus ~ label {
+  color: #7b1fa2 !important;
 }
 
-.group input:focus {
-  outline: none;
-}
-
-.group label {
-  color: #a8a8a8;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.group input:focus ~ label,
-.group input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #ae52d4;
-}
-
-.group .bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.group .bar:before,
-.group .bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #ae52d4;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.group .bar:before {
-  left: 50%;
-}
-
-.group .bar:after {
-  right: 50%;
-}
-
-.group input:focus ~ .bar:before,
-.group input:focus ~ .bar:after {
-  width: 50%;
-}
-
-.group .highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.group input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #5264AE;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-@keyframes inputHighlighter {
-  from {
-    background: #5264AE;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
+textarea {
+  max-height: 160px !important;
 }
 
 .topBar {
@@ -8688,6 +8589,7 @@ button:focus {
   margin: 0;
   width: 60px;
   height: 60px;
+  line-height: 60px;
 }
 
 .sideBar .widthOff {
@@ -8856,5 +8758,13 @@ button:focus {
   margin: 0;
   width: 20px;
   height: 20px;
+}
+
+#toolbar-container button {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 

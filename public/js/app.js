@@ -31713,7 +31713,7 @@ $(document).ready(function () {
     e.preventDefault();
     if (x < max_fields) {
       x++;
-      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>Text Box</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>');
+      $(wrapper).append("<div><?php print(file_get_contents('../resources/views/inc/richText.blade.php')); ?></div>");
     }
   });
 

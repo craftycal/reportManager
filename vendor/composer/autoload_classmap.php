@@ -4205,6 +4205,7 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
     'TranslationsTableSeeder' => $baseDir . '/database/seeds/TranslationsTableSeeder.php',
+    'Unisharp\\Ckeditor\\ServiceProvider' => $vendorDir . '/unisharp/laravel-ckeditor/ServiceProvider.php',
     'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',
     'VoyagerDatabaseSeeder' => $baseDir . '/database/seeds/VoyagerDatabaseSeeder.php',
     'VoyagerDummyDatabaseSeeder' => $baseDir . '/database/seeds/VoyagerDummyDatabaseSeeder.php',

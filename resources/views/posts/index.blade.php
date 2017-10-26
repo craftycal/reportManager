@@ -3,7 +3,7 @@
 @extends('layouts/app') 
 @section('content')
   
-  @if(count($posts) > 1)
+  @if(count($posts) > 0)
     
     <div class="content">
       @foreach($posts as $post)
@@ -17,7 +17,7 @@
             </div>
             <div class="col-xs-12">
               <p>
-                {{ $post->body }}
+                {{ $post->description }}
               </p>
               <a class="button pull-right" href="posts/{{$post->id}}">View Report</a>
             </div>

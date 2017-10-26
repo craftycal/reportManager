@@ -14,11 +14,13 @@
         </div>
         <div class="col-xs-12">
           <p>
-            {{ $post->body }}
+            {{ $post->description }}
           </p>
         </div>
       </div>
     </div>
+    
+    
   </div>
   
 @endsection
