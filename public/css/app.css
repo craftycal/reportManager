@@ -8760,7 +8760,7 @@ textarea {
   height: 20px;
 }
 
-#toolbar-container button {
+.ql-formats button {
   border: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;

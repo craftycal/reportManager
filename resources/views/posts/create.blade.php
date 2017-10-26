@@ -16,30 +16,27 @@
           <div class="col-xs-8 col-xs-offset-1">
             
             
-<?php print(file_get_contents('../resources/views/inc/richText.blade.php')); ?>
-            
             <form class="newReportForm" action="#" method="post">
               <div class="fixedCells">
-                {!! Form::open(['actiion' => 'PostsController@store', 'method' => 'POST']) !!}
-                
+              
+                {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
                 <div class="mui-textfield mui-textfield--float-label">
                   {{form::text('title', '', ['class' => ''] )}}            
-                  {{form::label('tilte', 'Title')}}
+                  {{form::label('title', 'Title')}}
                 </div>  
                 <div class="mui-textfield mui-textfield--float-label">
                   {{form::textarea('description', '', ['class' => ''] )}}            
                   {{form::label('description', 'Description')}}
                 </div>  
-                
                 {!! Form::close() !!}
-                
-                
                 
               </div>
               <div class="group"> 
                 <input class="submitButton button" type="submit" name="" value="submit">
               </div>
             </form>
+            
+            
           </div>
           <div class="col-xs-1 col-xs-offset-1">
             <div class="toolsList">

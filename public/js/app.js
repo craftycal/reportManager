@@ -31713,7 +31713,7 @@ $(document).ready(function () {
     e.preventDefault();
     if (x < max_fields) {
       x++;
-      $(wrapper).append("<div><?php print(file_get_contents('../resources/views/inc/richText.blade.php')); ?></div>");
+      $(wrapper).append('<div id="editor-container"></div>'); //add input box
     }
   });
 
@@ -31721,9 +31721,7 @@ $(document).ready(function () {
     e.preventDefault();
     if (x < max_fields) {
       x++;
-      $(wrapper).append('<div class="group"><input type="text" required><span class="highlight"></span><span class="bar"></span><label>Heading</label><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
-    } else {
-      alert('You Reached the limits');
+      $(wrapper).append('<div class="mui-textfield mui-textfield--float-label">{{form::text("title", "", ["class" => ""] )}}{{form::label("title", "Title")}}</div>'); //add input box
     }
   });
 
@@ -31734,6 +31732,7 @@ $(document).ready(function () {
       $(wrapper).append('<div class="group"><input type="file" name="pic" accept="image/*"><a href="#" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>'); //add input box
     }
   });
+
   $(wrapper).on("click", ".delete", function (e) {
     e.preventDefault();$(this).parent('div').remove();x--;
   });
