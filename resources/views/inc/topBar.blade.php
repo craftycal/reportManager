@@ -1,4 +1,4 @@
 @section('topBar')
 <div class="topBar">
-  <button id="click" type="button" name="login">Sign out</button>
+  <a class="button" href="landing" name="login">Sign out</a>
 </div>

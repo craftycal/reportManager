@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<p>this website is under development by the team at <a url="http://www.exceldigital.co.nz/">Excel Digital</a></p>
+=======
+<p>test</p>
+>>>>>>> parent of f319016... readme
+=======
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -51,3 +58,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+>>>>>>> parent of 5fe8ad5... test
