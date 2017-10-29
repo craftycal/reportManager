@@ -3,7 +3,7 @@
 <div class="landingBackground">
   <div class="loginMenu">
     <br>
-    <img class="logo" src="..\resources\assets\img\RM.png" alt="">
+    <img class="logo" src="../public/images/RM.png" alt="">
     <h1>
       Report Manager
     </h1>

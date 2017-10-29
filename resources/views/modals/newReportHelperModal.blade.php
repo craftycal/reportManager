@@ -19,7 +19,7 @@
           
           <div class="row">
             <div class="col-xs-2">
-              <img src="img/headingButton.png" alt="">
+              <img src="../public/images/headingButton.png" alt="">
             </div>
             <div class="col-xs-10">
               <h4>Heading:</h4>
@@ -31,7 +31,7 @@
           
           <div class="row">
             <div class="col-xs-2">
-              <img src="..\resources\assets\img\textButton.png" alt="">
+              <img src="../public/images/textButton.png" alt="">
             </div>
             <div class="col-xs-10">
               <h4>Text:</h4>
@@ -43,7 +43,7 @@
           
           <div class="row">
             <div class="col-xs-2">
-              <img src="..\resources\assets\img\imageButton.png" alt="">
+              <img src="../public/images/imageButton.png" alt="">
             </div>
             <div class="col-xs-10">
               <h4>Image:</h4>
@@ -55,7 +55,7 @@
           
           <div class="row">
             <div class="col-xs-2">
-              <img src="..\resources\assets\img\chartButton.png" alt="">
+              <img src="../public/images/chartButton.png" alt="">
             </div>
             <div class="col-xs-10">
               <h4>Chart:</h4>
@@ -67,7 +67,7 @@
           
           <div class="row">
             <div class="col-xs-2">
-              <img src="..\resources\assets\img\tableButton.png" alt="">
+              <img src="../public/images/tableButton.png" alt="">
             </div>
             <div class="col-xs-10">
               <h4>Table:</h4>

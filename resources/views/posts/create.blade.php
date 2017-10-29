@@ -1,5 +1,6 @@
 @include('inc.topBar')
 @include('inc.sideBar')
+@include('inc.richText')
 @include('Modals.chartModal')
 @include('Modals.tableModal')
 @include('Modals.newReportHelperModal')
@@ -15,6 +16,7 @@
         <div class="row">
           <div class="col-xs-8 col-xs-offset-1">
             
+            <div id="editor-container"></div>
             
             <form class="newReportForm" action="#" method="post">
               <div class="fixedCells">
@@ -29,7 +31,6 @@
                   {{form::label('description', 'Description')}}
                 </div>  
                 {!! Form::close() !!}
-                
               </div>
               <div class="group"> 
                 <input class="submitButton button" type="submit" name="" value="submit">
