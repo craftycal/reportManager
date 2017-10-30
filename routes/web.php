@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@landing');
+Route::get('/landing', 'PagesController@landing');
+Route::get('/userHome', 'PagesController@userHome');
+Route::get('/newReport', 'PagesController@newReport');
+Route::get('/error', 'PagesController@error');
+Route::get('/viewReport', 'PagesController@viewReport');
+
+Route::resource('posts', 'PostsController');
+
+
 
 Route::get('/about', function () {
     return '<h1>About</h1>';
