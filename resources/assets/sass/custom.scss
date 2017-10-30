@@ -264,11 +264,6 @@ textarea {
 }
 
 // new Report page
-.overflow-y {
-  overflow-y: scroll;
-  height: 90%;
-}
-
   .newReportForm {
     width: 100%;
     max-width: 600px;
@@ -290,7 +285,6 @@ textarea {
   }
   .toolsList {
     position: fixed;
-    
     ul {
       padding: 0px;
       list-style-type: none;
@@ -330,7 +324,6 @@ textarea {
     }
   }
 
-
 .ql-formats button{
   border: none !important;
   -webkit-box-shadow: none !important;
@@ -357,4 +350,40 @@ textarea {
 .reportView {
   max-height: 90%;
   overflow-y: scroll;
+}
+
+
+
+.contentPanel::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+.contentPanel::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: $yellowBase;
+}
+
+.contentPanel::-webkit-scrollbar-thumb
+{
+	background-color: $yellowBase;
+}
+
+
+
+textarea::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: $yellowBase;
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+	background-color: $yellowBase;
 }

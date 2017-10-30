@@ -6,7 +6,7 @@
         <p class="username">UserName</p>
       </a>
       <a href="posts">Home</sup></a>
-      <a href="newReport">New Report <sup><b>+</b></sup></a>
+      <a href="posts/create">New Report <sup><b>+</b></sup></a>
     </div>
   </div>
   <div id="click" class="sideNavButton positionOff">
