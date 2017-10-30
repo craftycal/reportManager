@@ -14,7 +14,7 @@
       <div class="row">
       <div class="col-xs-10">
           <h2>New Report</h2>
-          <form class="" action="index.html" method="post">
+          <form class="" action="index.html" method="post" class="overflow-y">
             <div class="newReportForm">
               <div class="mui-textfield mui-textfield--float-label">
                 <input type="text"></input>
