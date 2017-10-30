@@ -16,7 +16,6 @@
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          
           <div class="row">
             <div class="col-xs-2">
               <img src="../public/images/headingButton.png" alt="">
@@ -24,11 +23,11 @@
             <div class="col-xs-10">
               <h4>Heading:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
-          
           <div class="row">
             <div class="col-xs-2">
               <img src="../public/images/textButton.png" alt="">
@@ -36,11 +35,11 @@
             <div class="col-xs-10">
               <h4>Text:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
-          
           <div class="row">
             <div class="col-xs-2">
               <img src="../public/images/imageButton.png" alt="">
@@ -48,11 +47,11 @@
             <div class="col-xs-10">
               <h4>Image:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
-          
           <div class="row">
             <div class="col-xs-2">
               <img src="../public/images/chartButton.png" alt="">
@@ -60,11 +59,11 @@
             <div class="col-xs-10">
               <h4>Chart:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
-          
           <div class="row">
             <div class="col-xs-2">
               <img src="../public/images/tableButton.png" alt="">
@@ -72,11 +71,11 @@
             <div class="col-xs-10">
               <h4>Table:</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
-          
         </div>
         <div class="modal-footer">
           <button type="button" class="button" data-dismiss="modal">Close</button>

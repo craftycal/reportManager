@@ -8683,6 +8683,11 @@ textarea {
   height: 100px;
 }
 
+.submitButton {
+  width: 100%;
+  margin-top: 40px;
+}
+
 .newReportForm {
   width: 100%;
   max-width: 600px;
@@ -8690,20 +8695,27 @@ textarea {
   margin-top: 30px;
 }
 
-.newReportForm .submitButton {
-  width: 250px !important;
-  margin: 0 auto;
-}
-
 .newReportForm .delete {
   margin-top: 10px;
   float: right;
   color: #a8a8a8;
+  width: 5%;
+  text-align: right;
 }
 
 .newReportForm .delete:hover {
   color: #333334;
   cursor: pointer;
+}
+
+.newReportForm .inputIn {
+  width: 95%;
+  float: left;
+}
+
+.newReportForm .reportView {
+  max-height: 90%;
+  overflow-y: scroll;
 }
 
 .toolsList {
@@ -8727,8 +8739,8 @@ textarea {
 
 .helpPopButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   z-index: 6;
   border-radius: 50%;
   background-color: #ffc107;
@@ -8764,48 +8776,17 @@ textarea {
   transition: none !important;
 }
 
-.submitButton {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.inputIn {
-  width: 95%;
-  float: left;
-}
-
-.delete {
-  width: 5%;
-  text-align: right;
-}
-
-.reportView {
-  max-height: 90%;
-  overflow-y: scroll;
-}
-
-.contentPanel::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
-}
-
-.contentPanel::-webkit-scrollbar {
-  width: 6px;
-  background-color: #ffc107;
-}
-
-.contentPanel::-webkit-scrollbar-thumb {
-  background-color: #ffc107;
-}
-
+.contentPanel::-webkit-scrollbar-track,
 textarea::-webkit-scrollbar-track {
   background-color: #F5F5F5;
 }
 
+.contentPanel::-webkit-scrollbar,
 textarea::-webkit-scrollbar {
   width: 6px;
-  background-color: #ffc107;
 }
 
+.contentPanel::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
   background-color: #ffc107;
 }
