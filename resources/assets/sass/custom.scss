@@ -108,9 +108,11 @@ textarea {
 }
 
 // side menu styles
-.sideBar {
+
   .sideMenu {
-    position: relative;
+    position: absolute;
+    left: 0px;
+    z-index: 3;
     background-color: $purpleBase;
     height: 100%;
     width: 200px;
@@ -192,7 +194,7 @@ textarea {
   .positionOff { 
     left: 10px !important;
   }
-}
+
 
 // landing page 
 .landingBackground {
@@ -260,11 +262,8 @@ textarea {
 }
 
 // new Report page
-.newReport {
-  #addcap {
-    margin-top: 30px;
-    margin-bottom: 5px;
-  }
+
+
   .newReportForm {
     width: 100%;
     max-width: 600px;
@@ -285,10 +284,6 @@ textarea {
     }
   }
   .toolsList {
-    margin-top:  20px; 
-    margin-bottom: 20px;
-    top: 185px;
-    position: fixed;
     ul {
       padding: 0px;
       list-style-type: none;
@@ -327,7 +322,7 @@ textarea {
       height: 20px;
     }
   }
-}
+
 
 .ql-formats button{
   border: none !important;
@@ -337,13 +332,22 @@ textarea {
   transition: none !important;
 }
 
+.submitButton {
+  width: 100%;
+  margin-top: 40px;
+}
 
 .inputIn {
-  width: 80%;
+  width: 95%;
   float: left;
 }
 
 .delete {
   width: 5%;
-  float: right;
+  text-align: right;
+}
+
+.reportView {
+  max-height: 90%;
+  overflow-y: scroll;
 }

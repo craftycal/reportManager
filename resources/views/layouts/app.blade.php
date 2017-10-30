@@ -16,7 +16,12 @@
 </head>
 <body >
   
-  @yield('content')
+  
+  <div class="row">
+    <div class="col-xs-11 col-xs-offset-1">
+      @yield('content')
+    </div>
+  </div>
   
   
 </body>

@@ -3,11 +3,13 @@
 @extends('layouts/app') 
 @section('content')
   
+  
+  
   @if(count($posts) > 0)
     
     <div class="content">
       @foreach($posts as $post)
-        <div class="contentPanel col-xs-10 col-xs-offset-1">
+        <div class="contentPanel col-xs-11 ">
           <div class="row">
             <div class="col-xs-6">
               <h2>{{ $post->title }}</h2>

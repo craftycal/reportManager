@@ -1,5 +1,4 @@
 @section('sideBar')
-<div class="sideBar">
   <div id="pop" class="sideMenu widthOff col-xs-2">
     <div class="internal">
       <a href="#" class="userIcon">
@@ -13,4 +12,3 @@
   <div id="click" class="sideNavButton positionOff">
     <p>+</p>
   </div>
-</div>

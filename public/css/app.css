@@ -8497,8 +8497,10 @@ textarea {
   outline: none;
 }
 
-.sideBar .sideMenu {
-  position: relative;
+.sideMenu {
+  position: absolute;
+  left: 0px;
+  z-index: 3;
   background-color: #7b1fa2;
   height: 100%;
   width: 200px;
@@ -8506,7 +8508,7 @@ textarea {
   padding-top: 60px;
 }
 
-.sideBar .sideMenu .userIcon img {
+.sideMenu .userIcon img {
   height: 100px;
   width: 100px;
   border: 2px solid #ae52d4 !important;
@@ -8516,22 +8518,22 @@ textarea {
   margin-bottom: 4px;
 }
 
-.sideBar .sideMenu .userIcon .username {
+.sideMenu .userIcon .username {
   font-size: 0.8em;
   text-align: center;
   color: #ae52d4;
   margin-bottom: 34px;
 }
 
-.sideBar .sideMenu .userIcon:hover p {
+.sideMenu .userIcon:hover p {
   color: #fdfdfd;
 }
 
-.sideBar .sideMenu .userIcon:hover img {
+.sideMenu .userIcon:hover img {
   border: 2px solid #fdfdfd !important;
 }
 
-.sideBar .sideMenu a {
+.sideMenu a {
   font-size: 1em;
   color: #ae52d4 !important;
   display: block;
@@ -8540,27 +8542,27 @@ textarea {
   margin-bottom: 10px;
 }
 
-.sideBar .sideMenu a:hover {
+.sideMenu a:hover {
   color: #fdfdfd !important;
   text-decoration: none;
 }
 
-.sideBar .sideMenu a:visited {
+.sideMenu a:visited {
   text-decoration: none;
   color: #a8a8a8;
 }
 
-.sideBar .sideMenu a:focus {
+.sideMenu a:focus {
   text-decoration: none;
   color: #ffc107;
 }
 
-.sideBar .sideMenu a:active {
+.sideMenu a:active {
   text-decoration: none;
   color: #ffc107;
 }
 
-.sideBar .sideNavButton {
+.sideNavButton {
   z-index: 6;
   position: absolute;
   top: 50%;
@@ -8575,13 +8577,13 @@ textarea {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.sideBar .sideNavButton:hover {
+.sideNavButton:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.sideBar .sideNavButton p {
+.sideNavButton p {
   vertical-align: middle;
   text-align: center;
   color: #fdfdfd;
@@ -8592,15 +8594,15 @@ textarea {
   line-height: 60px;
 }
 
-.sideBar .widthOff {
+.widthOff {
   width: 40px !important;
 }
 
-.sideBar .widthOff .internal {
+.widthOff .internal {
   display: none;
 }
 
-.sideBar .positionOff {
+.positionOff {
   left: 10px !important;
 }
 
@@ -8679,57 +8681,45 @@ textarea {
   height: 100px;
 }
 
-.newReport #addcap {
-  margin-top: 30px;
-  margin-bottom: 5px;
-}
-
-.newReport .newReportForm {
+.newReportForm {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
-.newReport .newReportForm .submitButton {
+.newReportForm .submitButton {
   width: 250px !important;
   margin: 0 auto;
 }
 
-.newReport .newReportForm .delete {
+.newReportForm .delete {
   margin-top: 10px;
   float: right;
   color: #a8a8a8;
 }
 
-.newReport .newReportForm .delete:hover {
+.newReportForm .delete:hover {
   color: #333334;
   cursor: pointer;
 }
 
-.newReport .toolsList {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  top: 185px;
-  position: fixed;
-}
-
-.newReport .toolsList ul {
+.toolsList ul {
   padding: 0px;
   list-style-type: none;
   margin-bottom: 20px;
 }
 
-.newReport .toolsList ul li {
+.toolsList ul li {
   display: inline;
 }
 
-.newReport .toolsList ul li button {
+.toolsList ul li button {
   width: 75px;
   margin-bottom: 10px;
 }
 
-.newReport .helpPopButton {
+.helpPopButton {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -8744,13 +8734,13 @@ textarea {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.newReport .helpPopButton:hover {
+.helpPopButton:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.newReport .helpPopButton p {
+.helpPopButton p {
   vertical-align: middle;
   text-align: center;
   color: #fdfdfd;
@@ -8768,13 +8758,23 @@ textarea {
   transition: none !important;
 }
 
+.submitButton {
+  width: 100%;
+  margin-top: 40px;
+}
+
 .inputIn {
-  width: 80%;
+  width: 95%;
   float: left;
 }
 
 .delete {
   width: 5%;
-  float: right;
+  text-align: right;
+}
+
+.reportView {
+  max-height: 90%;
+  overflow-y: scroll;
 }
 

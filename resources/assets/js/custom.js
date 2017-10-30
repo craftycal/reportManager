@@ -30,7 +30,7 @@ $( document ).ready(function() {
   })
 
 
-
+// quill
 
   var toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
